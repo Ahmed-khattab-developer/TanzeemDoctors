@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "894395598613",
+    "project_id": "tanzeemdoctors-648bb",
+    "storage_bucket": "tanzeemdoctors-648bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894395598613:android:5134c956754a57f59e0b1c",
+        "android_client_info": {
+          "package_name": "com.tanzeem.tanzeemDoctors"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnOe85vYKw0BdAktThl6Gcm-85svzbY84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

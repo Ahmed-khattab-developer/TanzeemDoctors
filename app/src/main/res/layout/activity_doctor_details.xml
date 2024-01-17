@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.DoctorDetailsActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/headerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:background="@drawable/header_border_blue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/doctorImage"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_35sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/doctor" />
+
+                    <TextView
+                        android:id="@+id/doctorName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_toLeftOf="@+id/doctorImage"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:lineSpacingExtra="11sp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/doctorDetailsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="@dimen/_9sdp"
+                    app:cardElevation="@dimen/_1sdp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/headerLayout">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/nameArabic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:lineSpacingExtra="7sp"
+                            android:text="@string/name_in_arabic"
+                            android:textColor="#514ee5"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/doctorNameArabic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/nameArabic"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:textColor="#313450"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/line1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_below="@id/doctorNameArabic"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:background="#e7e7e7" />
+
+                        <TextView
+                            android:id="@+id/nameEnglish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line1"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:text="@string/name_english"
+                            android:textColor="#514ee5"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/doctorNameEnglish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line1"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/nameEnglish"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:textColor="#313450"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_below="@id/doctorNameEnglish"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:background="#e7e7e7" />
+
+                        <TextView
+                            android:id="@+id/phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line2"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:text="@string/phone"
+                            android:textColor="#514ee5"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/doctorPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line2"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/phone"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:maxLines="2"
+                            android:textColor="#313450"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/line3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_below="@id/doctorPhone"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:background="#e7e7e7" />
+
+                        <TextView
+                            android:id="@+id/phone2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line3"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:text="@string/phone"
+                            android:textColor="#514ee5"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/doctorPhoneTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line3"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/phone2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:textColor="#313450"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/line4"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_below="@id/doctorPhoneTwo"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:background="#e7e7e7" />
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line4"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:text="@string/email"
+                            android:textColor="#514ee5"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/doctorEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line4"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/email"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:textColor="#313450"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/line5"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_below="@id/doctorEmail"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:background="#e7e7e7" />
+
+                        <TextView
+                            android:id="@+id/faculty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line5"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:text="@string/faculty"
+                            android:textColor="#514ee5"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/doctorFaculty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line5"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/faculty"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:textColor="#313450"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/line6"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_below="@id/doctorFaculty"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:background="#e7e7e7" />
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line6"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:text="@string/title"
+                            android:textColor="#514ee5"
+                            android:textSize="@dimen/_13ssp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/doctorTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line6"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/title"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="right|center_vertical"
+                            android:lineSpacingExtra="7sp"
+                            android:textColor="#313450"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:id="@+id/line7"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_below="@id/doctorTitle"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:background="#e7e7e7" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/my_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line7"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tanzeem Doctors</string>
+
+    <string name="designed" translatable="false">Developed by \n Ahmed Khattab</string>
+
+    <string name="textNoInternet" translatable="false">هناك مشكلة في اتصالك بالانترنت</string>
+    <string name="done">تم الاضافه بنجاح</string>
+    <string name="search">search</string>
+    <string name="name_in_arabic">الاسم:</string>
+    <string name="name_english">الاسم انجليزي:</string>
+    <string name="phone">الهاتف:</string>
+    <string name="email">بريد الكتروني:</string>
+    <string name="faculty">مكان العمل:</string>
+    <string name="title">الدرجه العلميه:</string>
+
+</resources>
